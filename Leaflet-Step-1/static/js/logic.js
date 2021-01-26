@@ -86,12 +86,12 @@ d3.json(link, function(data) {
 
         var grades = [0, 1, 2, 3, 4, 5];
         var colors = [
-            "#2E0854",
-            "#551A8B",
-            "#9932CC",
-            "#BF3EFF",
+            "#FFBBFF",
             "#E066FF",
-            "#FFBBFF"
+            "#BF3EFF",
+            "#9932CC",
+            "#551A8B",
+            "#2E0854"
         ];
         div.innerHTML += '<b>Magnitude</b><br>'
         // Looping through
