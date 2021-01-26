@@ -1,6 +1,6 @@
 // Create map object
 var myMap = L.map("map", {
-    center: [36.77, -119.4179],
+    center: [15,0],
     zoom: 3
   });
   
@@ -81,9 +81,9 @@ d3.json(link, function(data) {
       });
     
       // details for the legend
-      legend.onAdd = function(map) {
+      legend.onAdd = function (map) {
         var div = L.DomUtil.create("div", "info legend");
-    
+
         var grades = [0, 1, 2, 3, 4, 5];
         var colors = [
             "#2E0854",
@@ -93,14 +93,17 @@ d3.json(link, function(data) {
             "#E066FF",
             "#FFBBFF"
         ];
-    
+        div.innerHTML += '<b>Magnitude</b><br>'
         // Looping through
         for (var i = 0; i < grades.length; i++) {
-          div.innerHTML +=
-            "<div style='width: 20px; height: 16px; float:left; margin-right:4px; margin-bottom: 2px; background: " + colors[i] + "'></div>" +
-            grades[i] + (grades[i + 1] ? "&ndash;" + grades[i + 1] + "<br>" : "+");
-        }
+            div.innerHTML +=
+                "<div style='width: 20px; height: 16px; float:left; margin-right:4px; margin-bottom: 2px; background: " + colors[i] + "'></div>" +
+                grades[i] + (grades[i + 1] ? "&ndash;" + grades[i + 1] + "<br>" : "+");
+            }
+
+            
         return div;
+        
       };
     
       // Add legend to the map.
