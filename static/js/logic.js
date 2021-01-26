@@ -97,7 +97,7 @@ d3.json(link, function(data) {
         // Looping through
         for (var i = 0; i < grades.length; i++) {
             div.innerHTML +=
-                "<div style='width: 20px; height: 16px; float:left; margin-right:4px; margin-bottom: 2px; background: " + colors[i] + "'></div>" +
+                "<div style='width: 16px; height: 16px; float:left; margin-right:4px; margin-bottom: 2px; background: " + colors[i] + "'></div>" +
                 grades[i] + (grades[i + 1] ? "&ndash;" + grades[i + 1] + "<br>" : "+");
             }
 
